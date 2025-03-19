@@ -247,7 +247,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
   const adminLogin = async (adminId: string, password: string) => {
     try {
-      const response = await fetch("https://porudction-back.onrender.com", {
+      const response = await fetch("${API_BASE_URL}/api/auth/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ adminId, password }),
