@@ -152,7 +152,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { Navigate } from "react-router-dom";
 
-const API_BASE_URL =  "http://localhost:5000";
+const API_BASE_URL =  "https://porudction-back.onrender.com";
 
 interface User {
   name: string;
@@ -247,7 +247,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
   const adminLogin = async (adminId: string, password: string) => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/admin-login", {
+      const response = await fetch("https://porudction-back.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ adminId, password }),
